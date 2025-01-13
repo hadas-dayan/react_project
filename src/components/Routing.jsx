@@ -9,6 +9,8 @@ import Contect from './Contect';
 // import Header from './Header';
 import Payment from './Payment';
 import Invited from './Invited';
+import Login from './Login';
+import Register from './Register';
 
 
 export const Routing = ({products,cart,addToCart,delitFromCart}) => {
@@ -25,6 +27,8 @@ export const Routing = ({products,cart,addToCart,delitFromCart}) => {
             {/* <Route path='/footer' element={<Footer/>} />   */}
             <Route path="/payment" element={<Payment cart={cart}/>} />
             <Route path="/invited" element={<Invited />} />
+            <Route path="/login" element={<Login/>} />
+            <Route path="/register" element={<Register/>} />
             <Route path="/" element={<Home/>} />
             
         </Routes>
