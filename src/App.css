@@ -1,0 +1,309 @@
+/*דף הבית======================
+/* General Reset */
+body, h1, img, div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container for all sections */
+.allPic {
+  font-family: Arial, sans-serif;
+}
+
+/* Main Picture Styling */
+.mainPic img {
+  width: 100%;
+  height: 500px; /* Reduce the height of the image */
+  display: block;
+  object-fit: cover;
+}
+
+/* Popular Destinations Section */
+.popular {
+  text-align: center;
+  margin: 20px 0;
+}
+.textP h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.imgp {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.imgp img {
+  width: calc(18% - 10px);
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.imgp img:hover {
+  transform: scale(1.05);
+}
+
+/* Favorite Seasons Section */
+.fevorite {
+  text-align: center;
+  margin: 20px 0;
+}
+.textF h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.imgF {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.imgF img {
+  width: calc(22% - 10px);
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.imgF img:hover {
+  transform: scale(1.05);
+}
+/*דף הבית======================
+/* עיצוב ה-HEADER */
+nav.nav-links {
+  background-color: #f1f8e9; /* צבע פסטל ירוק בהיר ועדין */
+  padding: 15px; /* שמרנו על ריווח קומפקטי */
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 60px; /* גובה נשאר זהה */
+  align-items: center; /* מיקום תוכן במרכז אנכי */
+  position: fixed; /* עמידה במקום */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* מבטיח שההדר יישאר מעל כל האלמנטים */
+}
+
+nav.nav-links a {
+  color: #607d8b; /* צבע אפור כהה (העדין ביותר) */
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+nav.nav-links a:hover {
+  color: #455a64; /* צבע כהה יותר בהובר */
+}
+
+/* עיצוב ה-FOOTER */
+.footer-container {
+  background-color: #f5f8fa; /* צבע פסטל בהיר ומרגיע */
+  padding: 10px 0; /* הקטנו עוד את הריווח */
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px; /* גובה קטן יותר */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* מיקום תוכן במרכז אנכי */
+}
+
+.footer-container a {
+  color: #607d8b; /* צבע אפור כהה */
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.1rem;
+}
+
+.footer-container a:hover {
+  color: #455a64; /* צבע כהה יותר בהובר */
+}
+
+/* עיצוב הכלליים */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  margin-top: 60px; /* משאיר מקום להדר הקבוע */
+  margin-bottom: 50px; /* משאיר מקום לפוטר הקבוע */
+}
+
+/* עיצוב עמוד אודות */
+.about-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #37474f;
+  line-height: 1.6;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 100px; /* הורדתי עוד 20px מתחילת העמוד */
+}
+
+.about-page h1 {
+  font-size: 2rem;
+  color: #455a64;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-page p {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+
+
+
+
+/*==========================
+/* עיצוב כללי לתצוגת המוצרים */
+.product-info {
+  margin-top: 100px; /* התחל 100px מתחת לתחילת העמוד */
+  display: flex; /* שינוי לגריד גמיש */
+  flex-wrap: wrap; /* עטיפה אוטומטית של הכרטיסיות */
+  justify-content: center; /* מרכז את הכרטיסיות אופקית */
+  align-items: flex-start; /* מוודא שהכרטיסים יתחילו באותו הקו */
+  gap: 20px; /* ריווח בין הכרטיסים */
+  padding: 20px;
+}
+
+/* עיצוב כל כרטיס */
+.card {
+  background-color: #ffffff; /* רקע לבן */
+  border: 1px solid #e0e0e0; /* מסגרת עדינה */
+  border-radius: 8px; /* פינות מעוגלות */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* צל עדין */
+  overflow: hidden; /* מניעת גלילה בתוך הכרטיס */
+  text-align: center; /* טקסט במרכז */
+  display: flex;
+  flex-direction: column; /* סידור אנכי */
+  justify-content: space-between; /* ריווח בין התמונה לטקסט */
+  height: 400px; /* גובה מוגדל */
+  width: 280px; /* רוחב קבוע לכל כרטיס */
+  padding: 10px; /* ריווח פנימי */
+}
+
+/* עיצוב התמונה */
+.card img {
+  width: 100%; /* התמונה תתפוס את כל רוחב המסגרת */
+  height: 60%; /* גובה התמונה יהיה קצת יותר מחצי מהכרטיס */
+  object-fit: cover; /* שמירה על פרופורציה */
+  border-bottom: 1px solid #e0e0e0; /* קו מפריד בין התמונה לטקסט */
+}
+
+/* עיצוב הכותרות */
+.card h1 {
+  font-size: 1.2rem;
+  color: #37474f;
+  margin: 10px 0;
+}
+
+.card h2 {
+  font-size: 1rem;
+  color: #607d8b;
+  margin: 5px 0;
+}
+
+/* עיצוב המחיר */
+.card h1.price {
+  font-size: 1.1rem;
+  color: #455a64;
+  margin: 10px 0;
+}
+
+/* עיצוב הכפתור */
+.card button {
+  padding: 10px 20px; /* ריווח מוגדל בכפתור */
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: auto; /* מוודא שהכפתור תמיד בתחתית */
+}
+
+.card button:hover {
+  background-color: #388e3c;
+}
+
+
+/*==========================
+/* עיצוב עמוד פרטי המוצר */
+.product-details-container {
+  display: flex; /* סידור אופקי */
+  flex-wrap: wrap; /* תמיכה במסכים קטנים */
+  align-items: center; /* יישור אנכי למרכז */
+  justify-content: center; /* יישור אופקי */
+  margin: 100px auto; /* התחלה מ-100px למטה */
+  max-width: 1200px; /* מגבלת רוחב כוללת */
+  gap: 10px; /* ריווח קטן יותר בין התמונה לפרטים */
+  padding: 20px;
+}
+
+/* עיצוב התמונה */
+.product-details-container img {
+  flex: 1; /* יחס גמיש */
+  max-width: 300px; /* רוחב מקסימלי של 300px */
+  height: auto; /* התאמת הגובה לפרופורציות התמונה */
+  object-fit: cover; /* שמירה על פרופורציות התמונה */
+  border-radius: 8px; /* פינות מעוגלות */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* צל לתמונה */
+}
+
+/* עיצוב הפרטים */
+.product-details-content {
+  flex: 2; /* הפרטים תופסים יותר מקום מהרוחב */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* יישור הטקסט למרכז אנכי */
+  padding: 10px;
+  text-align: right; /* יישור לימין */
+}
+
+/* עיצוב כותרות */
+.product-details-content h1 {
+  font-size: 1.8rem;
+  color: #37474f;
+  margin-bottom: 10px;
+}
+
+.product-details-content p {
+  font-size: 1rem;
+  color: #607d8b;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* עיצוב הכפתור */
+.product-details-content button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-start; /* מיקום הכפתור בתחילת הפרטים */
+}
+
+.product-details-content button:hover {
+  background-color: #388e3c;
+}
